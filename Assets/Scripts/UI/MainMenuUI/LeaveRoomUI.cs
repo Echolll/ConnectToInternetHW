@@ -36,7 +36,8 @@ public class LeaveRoomUI : MonoBehaviourPunCallbacks
         if(newMasterClient == PhotonNetwork.MasterClient) 
         {
             _waitingRoomForPlayer.SetActive(false);
-            _waitingRoomForCreator.SetActive(true);
+            _roomsMenu.SetActive(true);
+            PhotonNetwork.LeaveRoom();
         }
     }
 
